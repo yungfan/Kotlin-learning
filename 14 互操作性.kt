@@ -1,4 +1,3 @@
-import java.util.*
 fun java(source: List<Int>) {
     val list = ArrayList<Int>() // “for”- Java
     for (item in source) {

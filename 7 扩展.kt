@@ -10,6 +10,13 @@ val MutableList<Int>.lastIndex: Int
     get() = size - 1
 
 
+class Bike(var type: String)
+
+fun Bike.printType() {
+    print("自行车型号 $type")
+}
+
+
 fun main() {
     val list = mutableListOf(1, 2, 3)
     println(list)
@@ -17,5 +24,8 @@ fun main() {
     println(list)
 
     println(list.lastIndex)
+
+    var bike = Bike("永久")
+    bike.printType()
 }
 
