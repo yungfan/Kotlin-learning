@@ -6,8 +6,8 @@ fun main() {
         println("a = 10")
     }
 
-    val b = 20
     // if else
+    val b = 20
     if (b == 10) {
         println("b = 10")
     } else {
@@ -63,6 +63,8 @@ fun main() {
         println(c)
         c -= 1
     }
+
+    // do while
     do {
         println(c)
         c -= 1

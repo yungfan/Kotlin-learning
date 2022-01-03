@@ -52,7 +52,10 @@ fun test5() {
     job.cancel()
 }
 
-
 fun main() {
+    test1()
+    test2()
+    test3()
     test4()
+    test5()
 }

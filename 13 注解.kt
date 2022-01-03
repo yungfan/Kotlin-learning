@@ -1,7 +1,7 @@
-//@Target:定义注解能够应用于哪些目标对象 （CLASS,FUNCTION,PROPERTY...）
-//@Rentention:注解的保留期(SOURCE,BINARY,RUNTIME)
-//@Repeatable:标记的注解可以多次应用于相同的声明或类型
-//@MustBeDocumented:修饰的注解奖被文档工具提取到Api文档中
+// @Target:定义注解能够应用于哪些目标对象 （CLASS,FUNCTION,PROPERTY...）
+// @Rentention:注解的保留期(SOURCE,BINARY,RUNTIME)
+// @Repeatable:标记的注解可以多次应用于相同的声明或类型
+// @MustBeDocumented:修饰的注解奖被文档工具提取到Api文档中
 
 
 @Target(AnnotationTarget.CLASS, AnnotationTarget.PROPERTY, AnnotationTarget.FUNCTION)

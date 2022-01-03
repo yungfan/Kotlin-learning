@@ -33,7 +33,6 @@ fun main() {
     println(a--)
     print(--a)
 
-
     // 比较运算
     println(a > f)
     println(a >= f)
@@ -72,7 +71,6 @@ fun main() {
     val ret1 = s1
     val ret2 = s2 ?: "default value"
 
-
     // 数组
     val array1 = intArrayOf(1, 2, 3, 4, 5)
     val array2 = arrayOf("1", "2", "3", "4")
@@ -80,6 +78,7 @@ fun main() {
     // 类型判断
     println(str is String)
     println(str !is String)
+
     // 类型转换
     val res = str as Int // 运行时报错
     val res2 = str as? Int

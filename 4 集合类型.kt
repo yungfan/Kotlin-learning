@@ -1,5 +1,5 @@
 fun main() {
-    // list
+    // List
     var namesList = listOf<String>("zhangsan", "lisi", "wangwu", "lisi", "wangwu")
     println(namesList.size)
     println(namesList.first())
@@ -8,6 +8,7 @@ fun main() {
     println(namesList.contains("zhangsan"))
     println(namesList.indexOf("lisi"))
 
+    // MutableList
     var namesList2 = mutableListOf<String>("zhangsan", "lisi", "wangwu", "lisi", "wangwu")
     // 末尾增加
     namesList2.add("zhaoliu")
@@ -26,7 +27,7 @@ fun main() {
         println(listIterator.next())
     }
 
-    // set
+    // Set
     // 定义可以重复，就自动过滤
     var namesSet = setOf<String>("zhangsan", "lisi", "wangwu", "lisi", "wangwu")
     println(namesSet.size)
@@ -34,6 +35,7 @@ fun main() {
     println(namesSet.last())
     println(namesSet.contains("zhaoliu"))
 
+    // MutableSet
     var namesSet2 = mutableSetOf<String>("zhangsan", "lisi", "wangwu", "lisi", "wangwu")
     // 末尾增加
     namesSet2.add("zhaoliu")
@@ -51,7 +53,7 @@ fun main() {
     }
 
 
-    // map
+    // Map
     var map1 = mapOf<String, String>("key1" to "1", "key2" to "2", "key3" to "3")
     println(map1.keys)
     println(map1.values)
@@ -59,11 +61,12 @@ fun main() {
     println(map1.get("key2"))
     println(map1.containsKey("key2"))
     println(map1.containsValue("2"))
-
+    // 遍历
     for ((key, value) in map1) {
         println("$key -- $value")
     }
 
+    // MutableMap
     var map2 = mutableMapOf<String, String>("key1" to "1", "key2" to "2", "key3" to "3")
     map2.put("key4", "4")
     map2["key5"] = "5"

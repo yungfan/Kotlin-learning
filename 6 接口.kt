@@ -24,7 +24,6 @@ class MyClass : MyInterface {
     }
 }
 
-
 class MyClass2 : MyInterface {
     override var prop: Int
         get() = 100

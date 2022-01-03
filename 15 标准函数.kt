@@ -28,7 +28,6 @@ val result3 = StringBuilder().apply {
     append("fruits")
 }
 
-
 fun main() {
     println(result)
     println(result2)

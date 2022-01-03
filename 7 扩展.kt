@@ -9,23 +9,34 @@ fun MutableList<Int>.swap(index1: Int, index2: Int) {
 val MutableList<Int>.lastIndex: Int
     get() = size - 1
 
-
 class Bike(var type: String)
 
 fun Bike.printType() {
-    print("自行车型号 $type")
+    println("自行车型号是$type")
 }
 
-
 fun main() {
+    // 调用
+    // 方式一
     val list = mutableListOf(1, 2, 3)
-    println(list)
     list.swap(0, 2)
+    println(list)
+    // 方式二
+    (MutableList<Int>::swap)(list, 0, 2)
+    println(list)
+    // 方式三
+    MutableList<Int>::swap.invoke(list, 2, 1)
     println(list)
 
     println(list.lastIndex)
+    println((MutableList<Int>::lastIndex)(list))
+    println(MutableList<Int>::lastIndex.invoke(list))
 
     var bike = Bike("永久")
     bike.printType()
+    (Bike::printType)(Bike("杂牌"))
+    Bike::printType.invoke(Bike("凤凰"))
+    // 传递
+    val method: (Bike) -> Unit = Bike::printType
+    method(Bike("加中"))
 }
-
