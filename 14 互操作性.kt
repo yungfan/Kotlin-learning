@@ -1,5 +1,5 @@
 fun java(source: List<Int>) {
-    val list = ArrayList<Int>() // “for”- Java
+    val list = ArrayList<Int>() // Java
     for (item in source) {
         list.add(item)
     }

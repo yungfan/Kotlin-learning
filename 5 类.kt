@@ -30,7 +30,7 @@ class Student(name: String, age: Int) {
         intArrayOf(1, 2, 3)
     }
 
-    // var用lateinit，但不能付初始值，也不能是基本类型
+    // var用lateinit，但不能赋初始值，也不能是基本类型
     lateinit var person: Person
 
     // 不带参数
@@ -102,11 +102,11 @@ class Rectangle : Polygon() {
     }
 }
 
-// 数据类，一行代码创建一个包含 getters、 setters、 `equals()`、 `hashCode()`、 `toString()` 以及 `copy()` 的 POJO：
+// 数据类，一行代码创建一个包含getters、 setters、 equals()、hashCode()、toString()以及copy()的对象
 data class User(val name: String, val age: Int)
 
 // 无参构造函数：为主构造函数的每个参数提供默认值
-data class Teacher(val name: String = "", val type: String = "")
+class Teacher(val name: String = "", val type: String = "")
 
 // 枚举类
 enum class Method {
@@ -127,7 +127,7 @@ object Singleton {
     }
 }
 
-// 伴生对象, 位于 class 中的 object
+// 伴生对象，位于 class 中的 object
 // 可以利用伴生对象实现类的静态成员
 class Car {
     companion object {
@@ -140,7 +140,7 @@ class Car {
 
 class Elephant {
     // get/set，get获取的时候有变化，set设置的时候有条件可以使用，否则不需要使用
-    // 提供了 Backing Fields(后端变量) 机制,备用字段使用field关键字声明,field只能用于属性的访问器
+    // 提供了Backing Fields(后端变量)机制，备用字段使用field关键字声明，field只能用于属性的访问器
     var weight: Double = 0.0
         get() = field + 0.1 // field为后端变量
         set(value) {

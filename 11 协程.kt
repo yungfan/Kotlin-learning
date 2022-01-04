@@ -32,13 +32,16 @@ fun test3() = runBlocking {
     println("Hello")
 }
 
-// withContext: 阻塞上下文线程,必须在协程或者suspend函数中调用,通过Dispatchers来指定代码块所运行的线程
+// withContext: 阻塞上下文线程，必须在协程或者suspend函数中调用，通过Dispatchers来指定代码块所运行的线程
 fun test4() = runBlocking {
     withContext(Dispatchers.Default) {
         delay(1000)
         println("Default")
     }
     withContext(Dispatchers.IO) {
+        println("IO")
+    }
+    withContext(Dispatchers.Unconfined) {
         println("IO")
     }
 }

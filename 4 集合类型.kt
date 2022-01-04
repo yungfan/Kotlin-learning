@@ -7,6 +7,10 @@ fun main() {
     println(namesList.get(2))
     println(namesList.contains("zhangsan"))
     println(namesList.indexOf("lisi"))
+    // 遍历方式一
+    for (name in namesList) {
+        println(name)
+    }
 
     // MutableList
     var namesList2 = mutableListOf<String>("zhangsan", "lisi", "wangwu", "lisi", "wangwu")
@@ -14,15 +18,12 @@ fun main() {
     namesList2.add("zhaoliu")
     // 索引删除
     namesList2.removeAt(2)
-    println(namesList2)
-    // 删除并返回新list
+    println("namesList2 $namesList2")
+    // 从前往后删除n个元素并返回新List
     val newList = namesList2.drop(2)
-    println(newList)
-    // 遍历
-    for (name in namesList2) {
-        println(name)
-    }
-    val listIterator = namesList.iterator()
+    println("newList $newList")
+    // 遍历方式二
+    val listIterator = namesList2.iterator()
     while (listIterator.hasNext()) {
         println(listIterator.next())
     }
@@ -34,20 +35,21 @@ fun main() {
     println(namesSet.first())
     println(namesSet.last())
     println(namesSet.contains("zhaoliu"))
+    // 遍历方式一
+    for (name in namesSet) {
+        println(name)
+    }
 
     // MutableSet
     var namesSet2 = mutableSetOf<String>("zhangsan", "lisi", "wangwu", "lisi", "wangwu")
     // 末尾增加
     namesSet2.add("zhaoliu")
-    println(namesList2)
-    // 删除并返回新list
-    val newList2 = namesList2.drop(2)
-    println(newList2)
-    // 遍历
-    for (name in namesSet2) {
-        println(name)
-    }
-    val setIterator = namesSet.iterator()
+    println("namesSet2 $namesSet2")
+    // 从前往后删除n个元素并返回新List
+    val newSet = namesSet2.drop(2)
+    println("newSet $newSet")
+    // 遍历方式二
+    val setIterator = namesSet2.iterator()
     while (setIterator.hasNext()) {
         println(setIterator.next())
     }
@@ -61,7 +63,7 @@ fun main() {
     println(map1.get("key2"))
     println(map1.containsKey("key2"))
     println(map1.containsValue("2"))
-    // 遍历
+    // 遍历方式一
     for ((key, value) in map1) {
         println("$key -- $value")
     }
@@ -71,6 +73,12 @@ fun main() {
     map2.put("key4", "4")
     map2["key5"] = "5"
     // 修改
+    map2.put("key3", "three")
     map2["key1"] = "one"
-    println(map2)
+    // 遍历方式二
+    val mapIterator = map2.iterator()
+    while (mapIterator.hasNext()) {
+        val next = mapIterator.next()
+        println("key:${next.key}, value:${next.value}")
+    }
 }
